@@ -6,7 +6,7 @@
 
 * Yan Yan/Data Architect
 
-* Kevin Blum/TBD
+* Kevin Blum/ UI / UX Developer
 
 * Geovanni Posadas/Product management&Business Analyst
 
