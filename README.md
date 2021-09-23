@@ -28,7 +28,7 @@ This application will be for health care institutions to track all of their fina
 3. Back Office
 
 ## User Persona
-Back Office- Their vision for this application is for it to track their revenue and reach specific goals that they set. Their goals for this would be to better manage their health care institution and make it more efficient to manage. Their employees will also be making use of this application for logging the financial information daily in their systems.
+Practice Management(HR)- Their vision for this application is for it to track their revenue and reach specific goals that they set. Their goals for this would be to better manage their health care institution and make it more efficient to manage. Their employees will also be making use of this application for logging the financial information daily in their systems.
 
 The employee’s will be logging this information on the website created, since they already use their computers daily it will all be in one place.
 They are motivated by reaching peak financial performance and servicing their patients to the best of their abilities.
