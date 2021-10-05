@@ -35,3 +35,6 @@ Practice Management(HR)- Their vision for this application is for it to track th
 
 The employee’s will be logging this information on the website created, since they already use their computers daily it will all be in one place.
 They are motivated by reaching peak financial performance and servicing their patients to the best of their abilities.
+
+## Product Backlog
+Ordered backlog by department and who would be accessing each of the feature. We have different stakeholders who will be using the application including Doctors, Back Office, Front Office, Patients, and the Practice Management.
