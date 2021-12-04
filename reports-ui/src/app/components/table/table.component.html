@@ -1,0 +1,30 @@
+<div>
+    <table>
+        <tr>
+            <th>Patient Name</th>
+            <th>Patient ID</th>
+            <th>Doctor ID</th>
+            <th>Speciality Seen</th>
+            <th>Date of Birth</th>
+            <th>Date of Appointment</th>
+            <th>Time of Appointment</th>
+            <th>Appointment Status </th>
+            <th>Co Pay</th>
+            <th>Payment Amount</th>
+            <th>Amount Collected</th>
+        </tr>
+        <tr *ngFor="let recon of reconsheet"> 
+            <td>{{recon.patientName }}</td>
+            <td>{{recon.patientID}}</td>
+            <td>{{recon.doctorID}}</td>
+            <td>{{recon.specialitySeen}}</td>
+            <td>{{recon.dateOfBirth}}</td>
+            <td>{{recon.dateOfAppointment}}</td>
+            <td>{{recon.timeOfAppointment}}</td>
+            <td>{{recon.appointmentStatus}}</td>
+            <td>{{recon.coPay}}</td>
+            <td>{{recon.paymentAmount}}</td>
+            <td>{{recon.amountCollected}}</td>
+        </tr>
+    </table>
+</div>
