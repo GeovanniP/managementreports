@@ -25,4 +25,19 @@ export interface NewPatient {
     registrationDate: string;
 }
 
+export interface MissedAppointments {
+
+    patientName: string;
+    patientID: string;
+    dateOfAppointment: string;
+    timeOfAppointment: string;
+    
+
+}
+
+export interface OverdueRecords {
+    patientName: string;
+    patientID: string;
+    amountOwed: string;
+}
 

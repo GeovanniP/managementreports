@@ -1,9 +1,11 @@
+import { OverdueRecords } from './../../SheetTypeInterface';
+
 
 import { Component, OnInit, Input } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
-import { ReconSheet, NewPatient } from '../../SheetTypeInterface'
+import { ReconSheet, NewPatient, MissedAppointments } from '../../SheetTypeInterface'
 
-import { RECONSHEET, NEWPATIENT } from '../../mock-data'
+import { RECONSHEET, NEWPATIENT, MISSEDAPP, OVERDUERECORDS } from '../../mock-data'
 
 @Component({
   selector: 'app-table',
@@ -17,6 +19,8 @@ export class TableComponent implements OnInit {
 
   reconsheet: ReconSheet[] = RECONSHEET;
   newpatient: NewPatient[] = NEWPATIENT;
+  missedapp: MissedAppointments[] = MISSEDAPP;
+  overdue: OverdueRecords[] = OVERDUERECORDS;
 
   constructor() { }
 

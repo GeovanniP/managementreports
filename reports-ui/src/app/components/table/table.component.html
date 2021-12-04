@@ -57,4 +57,33 @@
         </tr>
     </table>
 
+    <h2>Missed Appointments</h2>
+    <table>
+        <tr>
+            <th>Patient Name</th>
+            <th>Patient ID</th>
+            <th>Date of Appointment</th>
+            <th>Time of Appointment</th>
+        </tr>
+        <tr *ngFor="let pat of missedapp"> 
+            <td>{{pat.patientName }}</td>
+            <td>{{pat.patientID}}</td>
+            <td>{{pat.dateOfAppointment}}</td>
+            <td>{{pat.timeOfAppointment}}</td>
+        </tr>
+    </table> 
+
+    <h2>Overdue Records</h2>
+    <table>
+        <tr>
+            <th>Patient Name</th>
+            <th>Patient ID</th>
+            <th>Amount Owed</th>
+        </tr>
+        <tr *ngFor="let due of overdue"> 
+            <td>{{due.patientName }}</td>
+            <td>{{due.patientID}}</td>
+            <td>{{due.amountOwed}}</td>
+        </tr>
+    </table> 
 </div>
