@@ -1,5 +1,5 @@
 export interface NewPatient {
-    patient_name: string;
+    patientName: string;
     patientID: string;
     specialitySeen: string;
     dateOfBirth: string;

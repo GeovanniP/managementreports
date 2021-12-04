@@ -1,8 +1,9 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
-import { ReconSheet } from '../../ReconSheet'
-import { RECONSHEET } from '../../mock-recon'
+import { ReconSheet, NewPatient } from '../../SheetTypeInterface'
+
+import { RECONSHEET, NEWPATIENT } from '../../mock-data'
 
 @Component({
   selector: 'app-table',
@@ -11,7 +12,11 @@ import { RECONSHEET } from '../../mock-recon'
 })
 export class TableComponent implements OnInit {
 
+
+  // @Input() table_name!: string;
+
   reconsheet: ReconSheet[] = RECONSHEET;
+  newpatient: NewPatient[] = NEWPATIENT;
 
   constructor() { }
 
