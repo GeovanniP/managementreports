@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SheetComponent } from './components/sheet/sheet.component';
@@ -41,6 +41,7 @@ import { RevenueAgingComponent } from './components/revenue-aging/revenue-aging.
     MatPaginatorModule,
     MatSortModule,
     MatTabsModule,
+    HttpClientModule
 
   ],
   providers: [],

@@ -4,6 +4,7 @@ import {MatTableModule} from '@angular/material/table';
 import {NewPatient} from '../../SheetTypeInterface'
 import { NEWPATIENT} from '../../mock-data'
 
+
 @Component({
   selector: 'app-newpatient',
   templateUrl: './newpatient.component.html',
@@ -18,5 +19,6 @@ export class NewpatientComponent implements OnInit {
   ngOnInit(): void {
     this.newPatientService.getNewPatient().subscribe((newpatient: NewPatient[]) => this.newpatient = newpatient);
   }
+
 
 }

@@ -1,9 +1,9 @@
 import { MISSEDAPP, OVERDUERECORDS, ALERT, VISITING, PAYERBASED, REVENUE } from './../mock-data';
-import { MissedAppointments, OverdueRecords, Alerts, VisitingList, PayerBased, RevenueAging } from './../SheetTypeInterface';
+import { MissedAppointments, OverdueRecords, Alerts, VisitingList, PayerBased, RevenueAging, ReconSheet } from './../SheetTypeInterface';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { NewPatient, ReconSheet } from '../SheetTypeInterface'
-
+import { NewPatient, } from '../SheetTypeInterface'
+import { HttpClient, HttpHeaders} from '@angular/common/http'
 import { NEWPATIENT, RECONSHEET}  from '../mock-data'
 
 @Injectable({
@@ -11,46 +11,49 @@ import { NEWPATIENT, RECONSHEET}  from '../mock-data'
 })
 export class ReportsService{
 
-  constructor() { }
+  private reconURL = 'http://localhost:5000/reconciliationSheetBeanList'
+  private newpatientURL = 'http://localhost:5000/newPatientsList'
+  private missedAppURL = 'http://localhost:5000/missedAppointmentsList'
+  private payerURL = 'http://localhost:5000/payerBasedReportList'
+  private overdueURL = 'http://localhost:5000/overdueRecordsList'
+  private visitingURL = 'http://localhost:5000/patientVisitingList'
+  private alertsURL = 'http://localhost:5000/clinicalAlertsList'
+  private revenueURL = 'http://localhost:5000/revenueAgingReportList'
+
+
+  constructor(private http:HttpClient) { }
 
   getRecon(): Observable<ReconSheet[]> {
-    const reconsheet = of(RECONSHEET);
-    return reconsheet;
+    return this.http.get<ReconSheet[]>(this.reconURL)
   }
 
   getNewPatient(): Observable<NewPatient[]> {
-    const newpatient = of(NEWPATIENT);
-    return newpatient;
+    return this.http.get<NewPatient[]>(this.newpatientURL)
   }
 
   getMissedApps(): Observable<MissedAppointments[]> {
-    const missedapp = of(MISSEDAPP);
-    return missedapp;
+    return this.http.get<MissedAppointments[]>(this.missedAppURL)
   }
 
   getOverdueRecords(): Observable<OverdueRecords[]> {
-    const overdue = of(OVERDUERECORDS);
-    return overdue;
+    return this.http.get<OverdueRecords[]>(this.overdueURL)
   }
 
   getAlerts(): Observable<Alerts[]> {
-    const alerts = of(ALERT);
-    return alerts;
+    return this.http.get<Alerts[]>(this.alertsURL)
   }
 
   getVisitingList(): Observable<VisitingList[]> {
-    const visiting = of(VISITING);
-    return visiting;
+    return this.http.get<VisitingList[]>(this.visitingURL)
+    
   }
 
   getPayerBased(): Observable<PayerBased[]> {
-    const payer = of(PAYERBASED);
-    return payer;
+    return this.http.get<PayerBased[]>(this.payerURL)
   }
 
   getRevenueAging(): Observable<RevenueAging[]> {
-    const revenue = of(REVENUE);
-    return revenue;
+    return this.http.get<RevenueAging[]>(this.revenueURL)
   }
 
 
