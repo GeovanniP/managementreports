@@ -1,0 +1,21 @@
+<h2>Visiting List</h2>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient ID</th>
+        <th>Date of Appointment</th>
+        <th>Time of Appointment</th>
+        <th>Notes</th>
+        <th>Medications</th>
+
+
+    </tr>
+    <tr *ngFor="let vist of visiting"> 
+        <td>{{vist.patientName }}</td>
+        <td>{{vist.patientID}}</td>
+        <td>{{vist.dateOfAppointment}}</td>
+        <td>{{vist.timeOfAppointment}}</td>
+        <td>{{vist.notes}}</td>
+        <td>{{vist.medications}}</td>
+    </tr>
+</table> 

@@ -1,0 +1,18 @@
+
+<h2>Bi-Weekly Revenue Aging Report</h2>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient ID</th>
+        <th>Amount Owed</th>
+        <th>Amount Due Date</th>
+
+    </tr>
+    <tr *ngFor="let rev of revenue"> 
+        <td>{{rev.patientName }}</td>
+        <td>{{rev.patientID}}</td>
+        <td>{{rev.amountOwed}}</td>
+        <td>{{rev.amountDueDate}}</td>
+
+    </tr>
+</table> 

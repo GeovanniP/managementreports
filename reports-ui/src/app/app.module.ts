@@ -14,6 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewpatientComponent } from './components/newpatient/newpatient.component';
 import { OverdueComponent } from './components/overdue/overdue.component';
 import { MissedAppsComponent } from './components/missed-apps/missed-apps.component';
+import { AlertsComponent } from './components/alerts/alerts.component';
+import { VisitingListComponent } from './components/visiting-list/visiting-list.component';
+import { PayerBasedComponent } from './components/payer-based/payer-based.component';
+import { RevenueAgingComponent } from './components/revenue-aging/revenue-aging.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { MissedAppsComponent } from './components/missed-apps/missed-apps.compon
     NewpatientComponent,
     OverdueComponent,
     MissedAppsComponent,
+    AlertsComponent,
+    VisitingListComponent,
+    PayerBasedComponent,
+    RevenueAgingComponent,
   ],
   imports: [
     BrowserModule,

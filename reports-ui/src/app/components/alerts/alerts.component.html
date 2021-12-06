@@ -1,0 +1,17 @@
+<h2>Alerts</h2>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient ID</th>
+        <th>Alert Title</th>
+        <th>Alert Description</th>
+
+    </tr>
+    <tr *ngFor="let alert of alerts"> 
+        <td>{{alert.patientName }}</td>
+        <td>{{alert.patientID}}</td>
+        <td>{{alert.alertTitle}}</td>
+        <td>{{alert.alertDescription}}</td>
+
+    </tr>
+</table> 

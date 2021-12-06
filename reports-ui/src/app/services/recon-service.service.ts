@@ -1,5 +1,5 @@
-import { MISSEDAPP, OVERDUERECORDS } from './../mock-data';
-import { MissedAppointments, OverdueRecords } from './../SheetTypeInterface';
+import { MISSEDAPP, OVERDUERECORDS, ALERT, VISITING, PAYERBASED, REVENUE } from './../mock-data';
+import { MissedAppointments, OverdueRecords, Alerts, VisitingList, PayerBased, RevenueAging } from './../SheetTypeInterface';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { NewPatient, ReconSheet } from '../SheetTypeInterface'
@@ -32,4 +32,27 @@ export class ReportsService{
     const overdue = of(OVERDUERECORDS);
     return overdue;
   }
+
+  getAlerts(): Observable<Alerts[]> {
+    const alerts = of(ALERT);
+    return alerts;
+  }
+
+  getVisitingList(): Observable<VisitingList[]> {
+    const visiting = of(VISITING);
+    return visiting;
+  }
+
+  getPayerBased(): Observable<PayerBased[]> {
+    const payer = of(PAYERBASED);
+    return payer;
+  }
+
+  getRevenueAging(): Observable<RevenueAging[]> {
+    const revenue = of(REVENUE);
+    return revenue;
+  }
+
+
 }
+

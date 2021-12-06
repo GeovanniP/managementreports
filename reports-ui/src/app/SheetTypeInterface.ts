@@ -32,7 +32,6 @@ export interface MissedAppointments {
     dateOfAppointment: string;
     timeOfAppointment: string;
     
-
 }
 
 export interface OverdueRecords {
@@ -41,27 +40,37 @@ export interface OverdueRecords {
     amountOwed: string;
 }
 
-export interface BiWeeklyAging {
-    patientName: string;
-    patientID: string;
-    amountOwed: string;
-    one: string;
-    two: string;
-    three: string;
-    total: string;
-}
+
 
 export interface Alerts {
     patientName: string;
     patientID: string;
-    alert: string;
+    alertTitle: string;
+    alertDescription: string;
 
 }
 
 export interface VisitingList {
     patientName: string;
     patientID: string;
-    alert: string;
+    dateOfAppointment: string;
+    timeOfAppointment: string;
+    notes: string;
+    medications: string; 
     
 }
 
+export interface PayerBased {
+    patientName: string;
+    patientID: string;
+    amountCollected: string;
+    amountOwed: string;
+    insurance: string;
+}
+
+export interface RevenueAging {
+    patientName: string;
+    patientID: string;
+    amountOwed: string;
+    amountDueDate: string;
+}

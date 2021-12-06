@@ -1,0 +1,19 @@
+
+<h2>Payer Based Report</h2>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient ID</th>
+        <th>Amount Collected</th>
+        <th>Amount Owed</th>
+        <th>Insurance</th>
+
+    </tr>
+    <tr *ngFor="let pay of payer"> 
+        <td>{{pay.patientName }}</td>
+        <td>{{pay.patientID}}</td>
+        <td>{{pay.amountCollected}}</td>
+        <td>{{pay.amountOwed}}</td>
+        <td>{{pay.insurance}}</td>
+    </tr>
+</table> 
