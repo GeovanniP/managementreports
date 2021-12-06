@@ -41,3 +41,27 @@ export interface OverdueRecords {
     amountOwed: string;
 }
 
+export interface BiWeeklyAging {
+    patientName: string;
+    patientID: string;
+    amountOwed: string;
+    one: string;
+    two: string;
+    three: string;
+    total: string;
+}
+
+export interface Alerts {
+    patientName: string;
+    patientID: string;
+    alert: string;
+
+}
+
+export interface VisitingList {
+    patientName: string;
+    patientID: string;
+    alert: string;
+    
+}
+

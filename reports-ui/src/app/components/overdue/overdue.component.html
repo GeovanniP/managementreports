@@ -1,0 +1,13 @@
+<h2>Overdue Records</h2>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient ID</th>
+        <th>Amount Owed</th>
+    </tr>
+    <tr *ngFor="let due of overdue"> 
+        <td>{{due.patientName }}</td>
+        <td>{{due.patientID}}</td>
+        <td>{{due.amountOwed}}</td>
+    </tr>
+</table> 

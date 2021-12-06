@@ -9,6 +9,11 @@ import { TableComponent } from './components/table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewpatientComponent } from './components/newpatient/newpatient.component';
+import { OverdueComponent } from './components/overdue/overdue.component';
+import { MissedAppsComponent } from './components/missed-apps/missed-apps.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,19 @@ import { MatSortModule } from '@angular/material/sort';
     SheetComponent,
     HeaderComponent,
     TableComponent,
+    NewpatientComponent,
+    OverdueComponent,
+    MissedAppsComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatTabsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

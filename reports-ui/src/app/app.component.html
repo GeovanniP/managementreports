@@ -1,5 +1,9 @@
 <div>
 <app-header></app-header>
-<app-table></app-table>
-
+<mat-tab-group> 
+    <mat-tab label = "Reconciliation Sheet"> <app-table></app-table></mat-tab>
+    <mat-tab label = "New Patient List"><app-newpatient></app-newpatient></mat-tab>
+    <mat-tab label = "Overdue Records"><app-overdue></app-overdue></mat-tab>
+    <mat-tab label = "Missed Appointments"><app-missed-apps></app-missed-apps></mat-tab>
+</mat-tab-group>
 </div>

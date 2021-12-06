@@ -1,0 +1,15 @@
+<h2>Missed Appointments</h2>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient ID</th>
+        <th>Date of Appointment</th>
+        <th>Time of Appointment</th>
+    </tr>
+    <tr *ngFor="let pat of missedapp"> 
+        <td>{{pat.patientName }}</td>
+        <td>{{pat.patientID}}</td>
+        <td>{{pat.dateOfAppointment}}</td>
+        <td>{{pat.timeOfAppointment}}</td>
+    </tr>
+</table> 

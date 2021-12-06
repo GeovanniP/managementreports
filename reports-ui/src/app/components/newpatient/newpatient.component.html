@@ -1,0 +1,27 @@
+<h2>New Patient List</h2>
+<table>
+        <tr>
+            <th>Patient Name</th>
+            <th>Patient ID</th>
+            <th>Speciality Seen</th>
+            <th>Date of Birth</th>
+            <th>Date of Appointment</th>
+            <th>Time of Appointment</th>
+            <th>Appointment Status </th>
+            <th>Co Pay</th>
+            <th>Insurance</th>
+            <th>Registration Date</th>
+        </tr>
+        <tr *ngFor="let pat of newpatient"> 
+            <td>{{pat.patientName }}</td>
+            <td>{{pat.patientID}}</td>
+            <td>{{pat.specialitySeen}}</td>
+            <td>{{pat.dateOfBirth}}</td>
+            <td>{{pat.dateOfAppointment}}</td>
+            <td>{{pat.timeOfAppointment}}</td>
+            <td>{{pat.appointmentStatus}}</td>
+            <td>{{pat.coPay}}</td>
+            <td>{{pat.insurance}}</td>
+            <td>{{pat.registrationDate}}</td>
+        </tr>
+</table>
