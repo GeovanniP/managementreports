@@ -17,11 +17,11 @@ export class TableComponent implements OnInit {
 
   reconsheet: ReconSheet[] = []
   
- 
 
   constructor(private reconService: ReportsService) { }
 
   ngOnInit(): void {
+    
     this.reconService.getRecon().subscribe((reconsheet: ReconSheet[]) => this.reconsheet = reconsheet);
   }
 

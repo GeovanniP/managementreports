@@ -10,7 +10,7 @@ import { ReportsService } from 'src/app/services/recon-service.service';
 })
 export class OverdueComponent implements OnInit {
 
-  overdue: OverdueRecords[] = OVERDUERECORDS;
+  overdue: OverdueRecords[] = [];
 
   constructor(private overdueService: ReportsService) { }
 
