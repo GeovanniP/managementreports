@@ -8,12 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./visiting-list.component.css']
 })
 export class VisitingListComponent implements OnInit {
+  showImage!: boolean;
 
   visiting: VisitingList[] = [];
+  columnsToDisplay = ['Patient Name', 'Patient ID', 'Date of Appointment', 'Time of Appointment', 'Notes', 'Medications']
 
-  constructor(private visitingService: ReportsService) { }
-
-  ngOnInit(): void {
-    this.visitingService.getVisitingList().subscribe((visiting: VisitingList[]) => this.visiting = visiting);
+  constructor(private visitingService: ReportsService) {
+    this.showImage = false;
+    this.visitingService.getVisitingList().subscribe( x => {
+      this.visiting= x;
+    })
   }
+  ngOnInit(): void {
+    
+  }
+
+  
 }

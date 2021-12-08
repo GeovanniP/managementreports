@@ -1,19 +1,40 @@
-
+<div>
 <h2>Payer Based Report</h2>
-<table>
-    <tr>
-        <th>Patient Name</th>
-        <th>Patient ID</th>
-        <th>Amount Collected</th>
-        <th>Amount Owed</th>
-        <th>Insurance</th>
+<table mat-table [dataSource]="payer" >
 
-    </tr>
-    <tr *ngFor="let pay of payer"> 
-        <td>{{pay.patientName }}</td>
-        <td>{{pay.patientID}}</td>
-        <td>{{pay.amountCollected}}</td>
-        <td>{{pay.amountOwed}}</td>
-        <td>{{pay.insurance}}</td>
-    </tr>
-</table> 
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Patient Name">
+      <th mat-header-cell *matHeaderCellDef> Patient Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.patientName}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Patient ID">
+      <th mat-header-cell *matHeaderCellDef> Patient ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.patientID}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Amount Collected">
+      <th mat-header-cell *matHeaderCellDef> Amount Collected</th>
+      <td mat-cell *matCellDef="let element"> {{element.amountCollected}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Amount Owed">
+      <th mat-header-cell *matHeaderCellDef> Amount Owed </th>
+      <td mat-cell *matCellDef="let element"> {{element.amountOwed}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Insurance">
+        <th mat-header-cell *matHeaderCellDef> Insurance </th>
+        <td mat-cell *matCellDef="let element"> {{element.insurance}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+  </table>
+</div>

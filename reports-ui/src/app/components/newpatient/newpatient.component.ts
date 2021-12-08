@@ -12,13 +12,22 @@ import { NEWPATIENT} from '../../mock-data'
 })
 export class NewpatientComponent implements OnInit {
 
+  showImage = false;
   newpatient: NewPatient[] = [];
 
-  constructor(private newPatientService: ReportsService) { }
+  columnsToDisplay = ['Patient Name', 'Patient ID','Doctor ID', 'Speciality Seen','Date of Birth', 'Date of Appointment', 'Time of Appointment', 'Appointment Status', 'CoPay', 'Insurance', 'Registration Date']
 
-  ngOnInit(): void {
-    this.newPatientService.getNewPatient().subscribe((newpatient: NewPatient[]) => this.newpatient = newpatient);
+  constructor(private newpatientService: ReportsService) {
+    this.showImage = false;
+    this.newpatientService.getNewPatient().subscribe( x => {
+      this.newpatient= x;
+    })
   }
+  ngOnInit(): void {
+    
+  }
+
+  
 
 
 }

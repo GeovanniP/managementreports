@@ -9,14 +9,22 @@ import { MISSEDAPP } from '../../mock-data'
   styleUrls: ['./missed-apps.component.css']
 })
 export class MissedAppsComponent implements OnInit {
-
+  showImage!: boolean;
   missedapp: MissedAppointments[] = [];
 
-  constructor(private missedAppService: ReportsService) { }
+  columnsToDisplay = ['Patient Name', 'Patient ID', 'Date of Appointment', 'Time of Appointment']
 
-  ngOnInit(): void {
-    this.missedAppService.getMissedApps().subscribe((missedapp: MissedAppointments[]) => this.missedapp = missedapp);
+  constructor(private missedappService: ReportsService) {
+    this.showImage = false;
+    this.missedappService.getMissedApps().subscribe( x => {
+      this.missedapp= x;
+    })
   }
+  ngOnInit(): void {
+    
+  }
+
+  
 
 }
 

@@ -13,16 +13,21 @@ import { RECONSHEET}  from '../../mock-data'
 export class TableComponent implements OnInit {
 
 
-  // @Input() table_name!: string;
-
+  
+  showImage!: boolean;
   reconsheet: ReconSheet[] = []
   
+  columnsToDisplay = ['Patient Name', 'Patient ID','Doctor ID', 'Speciality Seen','Date of Birth', 'Date of Appointment', 'Time of Appointment', 'Appointment Status', 'CoPay', 'Payment Amount', 'Amount Collected']
 
-  constructor(private reconService: ReportsService) { }
-
+  constructor(private reconService: ReportsService) {
+    this.showImage = false;
+    this.reconService.getRecon().subscribe( x => {
+      this.reconsheet= x;
+    })
+  }
   ngOnInit(): void {
     
-    this.reconService.getRecon().subscribe((reconsheet: ReconSheet[]) => this.reconsheet = reconsheet);
   }
+  
 
 }

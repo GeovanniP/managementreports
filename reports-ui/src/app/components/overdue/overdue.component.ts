@@ -10,13 +10,19 @@ import { ReportsService } from 'src/app/services/recon-service.service';
 })
 export class OverdueComponent implements OnInit {
 
+  showImage!: boolean;
   overdue: OverdueRecords[] = [];
 
-  constructor(private overdueService: ReportsService) { }
+  columnsToDisplay = ['Patient Name', 'Patient ID', 'Amount Owed',]
 
-  ngOnInit(): void {
-    this.overdueService.getOverdueRecords().subscribe((overdue: OverdueRecords[]) => this.overdue = overdue);
+  constructor(private overdueService: ReportsService) {
+    this.showImage = false;
+    this.overdueService.getOverdueRecords().subscribe( x => {
+      this.overdue= x;
+    })
   }
-  
+  ngOnInit(): void {
+    
+  }
 
 }

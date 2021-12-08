@@ -8,13 +8,20 @@ import { ReportsService } from './../../services/recon-service.service';
   styleUrls: ['./alerts.component.css']
 })
 export class AlertsComponent implements OnInit {
-
+  showImage!: boolean;
   alerts: Alerts[] = [];
 
-  constructor(private alertService: ReportsService) { }
+  columnsToDisplay = ['Patient Name', 'Patient ID', 'Alert Title', 'Alert Description']
 
+  constructor(private alertService: ReportsService) {
+    this.showImage = false;
+    this.alertService.getAlerts().subscribe( x => {
+      this.alerts= x;
+    })
+  }
   ngOnInit(): void {
-    this.alertService.getAlerts().subscribe((alerts: Alerts[]) => this.alerts = alerts);
+    
   }
 
+  
 }

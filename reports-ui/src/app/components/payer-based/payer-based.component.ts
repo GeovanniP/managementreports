@@ -9,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payer-based.component.css']
 })
 export class PayerBasedComponent implements OnInit {
-
+  showImage!: boolean;
   payer: PayerBased[] = [];
 
-  constructor(private payerService: ReportsService) { }
+  columnsToDisplay = ['Patient Name', 'Patient ID', 'Amount Collected', 'Amount Owed', 'Insurance']
 
-  ngOnInit(): void {
-    this.payerService.getPayerBased().subscribe((payer: PayerBased[]) => this.payer = payer);
+  constructor(private payerService: ReportsService) {
+    this.showImage = false;
+    this.payerService.getPayerBased().subscribe( x => {
+      this.payer= x;
+    })
   }
-
+  ngOnInit(): void {
+    
+  }
 }
