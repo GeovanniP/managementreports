@@ -1,3 +1,4 @@
+
 export interface ReconSheet {
     patientName: string;
     patientID: string;
@@ -47,7 +48,7 @@ export interface Alerts {
     patientID: string;
     alertTitle: string;
     alertDescription: string;
-
+    
 }
 
 export interface VisitingList {

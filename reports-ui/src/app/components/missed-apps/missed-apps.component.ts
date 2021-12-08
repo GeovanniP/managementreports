@@ -1,7 +1,7 @@
-import { MissedAppointments } from './../../SheetTypeInterface';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ReportsService } from './../../services/recon-service.service';
-import { MISSEDAPP } from '../../mock-data'
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-missed-apps',
@@ -10,14 +10,16 @@ import { MISSEDAPP } from '../../mock-data'
 })
 export class MissedAppsComponent implements OnInit {
   showImage!: boolean;
-  missedapp: MissedAppointments[] = [];
+  missedapp: any;
 
   columnsToDisplay = ['Patient Name', 'Patient ID', 'Date of Appointment', 'Time of Appointment']
 
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor(private missedappService: ReportsService) {
     this.showImage = false;
     this.missedappService.getMissedApps().subscribe( x => {
-      this.missedapp= x;
+      this.missedapp= new MatTableDataSource<any>(x);
+      this.missedapp.paginator = this.paginator;
     })
   }
   ngOnInit(): void {

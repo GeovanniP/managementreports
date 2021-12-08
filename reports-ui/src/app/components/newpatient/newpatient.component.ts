@@ -1,8 +1,9 @@
 import { ReportsService } from './../../services/recon-service.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 import {NewPatient} from '../../SheetTypeInterface'
-import { NEWPATIENT} from '../../mock-data'
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 @Component({
@@ -13,14 +14,16 @@ import { NEWPATIENT} from '../../mock-data'
 export class NewpatientComponent implements OnInit {
 
   showImage = false;
-  newpatient: NewPatient[] = [];
+  newpatient: any;
 
   columnsToDisplay = ['Patient Name', 'Patient ID','Doctor ID', 'Speciality Seen','Date of Birth', 'Date of Appointment', 'Time of Appointment', 'Appointment Status', 'CoPay', 'Insurance', 'Registration Date']
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private newpatientService: ReportsService) {
     this.showImage = false;
     this.newpatientService.getNewPatient().subscribe( x => {
-      this.newpatient= x;
+      this.newpatient= new MatTableDataSource<any>(x);
+      this.newpatient.paginator = this.paginator;
     })
   }
   ngOnInit(): void {

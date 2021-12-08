@@ -1,6 +1,9 @@
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 import { Alerts } from './../../SheetTypeInterface';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ReportsService } from './../../services/recon-service.service';
+
 
 @Component({
   selector: 'app-alerts',
@@ -9,18 +12,25 @@ import { ReportsService } from './../../services/recon-service.service';
 })
 export class AlertsComponent implements OnInit {
   showImage!: boolean;
-  alerts: Alerts[] = [];
+  alerts: any;
 
   columnsToDisplay = ['Patient Name', 'Patient ID', 'Alert Title', 'Alert Description']
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  
 
   constructor(private alertService: ReportsService) {
     this.showImage = false;
     this.alertService.getAlerts().subscribe( x => {
-      this.alerts= x;
+      this.alerts = new MatTableDataSource<any>(x);
+      this.alerts.paginator = this.paginator;
     })
+    
+    
   }
   ngOnInit(): void {
-    
+
+  
   }
 
   

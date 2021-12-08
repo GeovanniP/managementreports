@@ -39,7 +39,9 @@
     {"patientName":"Patient B","patientID":"P102","amountOwed":"0"},
     {"patientName":"Patient C","patientID":"P103","amountOwed":"0"},
     {"patientName":"Patient D","patientID":"P104","amountOwed":"0"},
-    {"patientName":"Patient E","patientID":"P105","amountOwed":"0"}],
+    {"patientName":"Patient E","patientID":"P105","amountOwed":"0"},
+    {"patientName":"Patient F","patientID":"P106","amountOwed":"0"},
+    {"patientName":"Patient G","patientID":"P107","amountOwed":"0"}],
 
 "clinicalAlertsList":[
     {"patientName":"Patient A","patientID":"P101","alertTitle":"Alert","alertDescription":"Desc"},
