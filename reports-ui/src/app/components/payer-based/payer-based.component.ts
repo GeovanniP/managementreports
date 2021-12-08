@@ -1,5 +1,4 @@
 import { ReportsService } from 'src/app/services/recon-service.service';
-import { PayerBased } from './../../SheetTypeInterface';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -13,7 +12,7 @@ export class PayerBasedComponent implements OnInit {
   showImage!: boolean;
   payer: any;
 
-  columnsToDisplay = ['Patient Name', 'Patient ID', 'Amount Collected', 'Amount Owed', 'Insurance']
+  columnsToDisplay = ['Patient-Name', 'Patient-ID', 'Amount-Collected', 'Amount-Owed', 'Insurance']
   
   @ViewChild(MatPaginator) paginator!: MatPaginator
 

@@ -12,7 +12,7 @@ export class MissedAppsComponent implements OnInit {
   showImage!: boolean;
   missedapp: any;
 
-  columnsToDisplay = ['Patient Name', 'Patient ID', 'Date of Appointment', 'Time of Appointment']
+  columnsToDisplay = ['Patient-Name', 'Patient-ID', 'Date-of-Appointment', 'Time-of-Appointment']
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor(private missedappService: ReportsService) {

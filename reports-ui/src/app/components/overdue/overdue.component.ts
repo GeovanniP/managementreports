@@ -13,7 +13,7 @@ export class OverdueComponent implements OnInit {
   showImage!: boolean;
   overdue: any;
 
-  columnsToDisplay = ['Patient Name', 'Patient ID', 'Amount Owed',]
+  columnsToDisplay = ['Patient-Name', 'Patient-ID', 'Amount-Owed']
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 

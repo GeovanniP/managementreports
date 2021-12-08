@@ -9,6 +9,12 @@ table {
 
 }
 
+.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Alert-Title, .mat-column-Alert-Description {
+    padding-left: 5%;
+}
+
+
+
 h2 {
     text-align: center;
     background-color: #036FBA;

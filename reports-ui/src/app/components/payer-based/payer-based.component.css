@@ -3,12 +3,14 @@ table,th,tr, td {
 }
 
 
-
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: #F6F9FE 
 
+}
+.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Amount-Owed, .mat-column-Amount-Collected, .mat-column-Insurance{
+    padding-left: 5%;
 }
 
 h2 {

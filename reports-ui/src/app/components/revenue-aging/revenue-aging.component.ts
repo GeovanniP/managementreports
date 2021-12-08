@@ -14,7 +14,7 @@ export class RevenueAgingComponent implements OnInit {
   showImage!: boolean;
   revenue: any;
 
-  columnsToDisplay = ['Patient Name', 'Patient ID', 'Amount Owed', 'Amount Due Date']
+  columnsToDisplay = ['Patient-Name', 'Patient-ID', 'Amount-Owed', 'Amount-Due-Date']
   
   @ViewChild(MatPaginator) paginator!: MatPaginator
 
