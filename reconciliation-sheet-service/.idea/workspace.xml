@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f64f3570-0f0a-4c68-b166-47717fc0ca5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="f64f3570-0f0a-4c68-b166-47717fc0ca5f" name="Changes" comment="Build completed locally for reconciliation-sheet-service">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -86,6 +86,14 @@
       <option name="presentableId" value="Default" />
       <updated>1638321822002</updated>
     </task>
+    <task id="LOCAL-00001" summary="Build completed locally for reconciliation-sheet-service">
+      <created>1639008480492</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639008480492</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,5 +113,7 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/managementreports" />
     </ignored-roots>
+    <MESSAGE value="Build completed locally for reconciliation-sheet-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build completed locally for reconciliation-sheet-service" />
   </component>
 </project>

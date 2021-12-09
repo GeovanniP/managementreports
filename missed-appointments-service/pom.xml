@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cs673.practice-management-reports</groupId>
-	<artifactId>missed-appointments-list-service</artifactId>
+	<artifactId>missed-appointments-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>missed-appointments-list-service</name>
+	<name>missed-appointments-service</name>
 	<description>Project for generating missed appointments list for practice management of a health care institution</description>
 	<properties>
 		<java.version>11</java.version>

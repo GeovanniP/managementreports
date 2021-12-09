@@ -1,4 +1,4 @@
-package com.cs673.practicemanagementreports.missedappointmentslistservice.beans;
+package com.cs673.practicemanagementreports.missedappointmentsservice.beans;
 
 import java.util.List;
 
