@@ -1,10 +1,8 @@
-import { MISSEDAPP, OVERDUERECORDS, ALERT, VISITING, PAYERBASED, REVENUE } from './../mock-data';
 import { MissedAppointments, OverdueRecords, Alerts, VisitingList, PayerBased, RevenueAging, ReconSheet } from './../SheetTypeInterface';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { NewPatient, } from '../SheetTypeInterface'
-import { HttpClient, HttpHeaders} from '@angular/common/http'
-import { NEWPATIENT, RECONSHEET}  from '../mock-data'
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'

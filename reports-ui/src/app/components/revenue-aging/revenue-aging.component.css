@@ -8,7 +8,9 @@ table {
     background-color: #F6F9FE 
 
 }
-
+.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Amount-Owed, .mat-column-Amount-Due-Date {
+    padding-left: 10%;
+}
 h2 {
     text-align: center;
     background-color: #036FBA;

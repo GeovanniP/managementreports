@@ -9,6 +9,10 @@ table {
 
 }
 
+.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Amount-Owed {
+    padding-left: 10%;
+}
+
 h2 {
     text-align: center;
     background-color: #036FBA;

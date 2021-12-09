@@ -10,6 +10,10 @@ table {
 
 }
 
+.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Date-of-Appointment, .mat-column-Time-of-Appointment {
+    padding-left: 5%;
+}
+
 h2 {
     text-align: center;
     background-color: #036FBA;

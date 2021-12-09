@@ -14,7 +14,7 @@ export class AlertsComponent implements OnInit {
   showImage!: boolean;
   alerts: any;
 
-  columnsToDisplay = ['Patient Name', 'Patient ID', 'Alert Title', 'Alert Description']
+  columnsToDisplay = ['Patient-Name', 'Patient-ID', 'Alert-Title', 'Alert-Description']
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   

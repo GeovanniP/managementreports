@@ -16,7 +16,7 @@ export class NewpatientComponent implements OnInit {
   showImage = false;
   newpatient: any;
 
-  columnsToDisplay = ['Patient Name', 'Patient ID','Doctor ID', 'Speciality Seen','Date of Birth', 'Date of Appointment', 'Time of Appointment', 'Appointment Status', 'CoPay', 'Insurance', 'Registration Date']
+  columnsToDisplay = ['Patient-Name', 'Patient-ID', 'Speciality-Seen','Date-of-Birth', 'Date-of-Appointment', 'Time-of-Appointment', 'Appointment-Status', 'CoPay', 'Insurance', 'Registration-Date']
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private newpatientService: ReportsService) {

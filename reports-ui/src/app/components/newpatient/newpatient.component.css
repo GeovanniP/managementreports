@@ -9,6 +9,10 @@ table {
 
 }
 
+.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Speciality-Seen, .mat-column-Date-of-Birth, .mat-column-Date-of-Appointment, .mat-column-Time-of-Appointment, .mat-column-Appointment-Status, .mat-column-CoPay, .mat-column-Insurance, .mat-column-Registration-Date {
+    padding-left: 1%;
+}
+
 h2 {
     text-align: center;
     background-color: #036FBA;

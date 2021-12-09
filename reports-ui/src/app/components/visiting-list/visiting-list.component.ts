@@ -12,7 +12,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class VisitingListComponent implements OnInit {
   showImage!: boolean;
   visiting: any;
-  columnsToDisplay = ['Patient Name', 'Patient ID', 'Date of Appointment', 'Time of Appointment', 'Notes', 'Medications']
+  columnsToDisplay = ['Patient-Name', 'Patient-ID', 'Date-of-Appointment', 'Time-of-Appointment', 'Notes', 'Medications']
   @ViewChild(MatPaginator) paginator!: MatPaginator
 
   constructor(private visitingService: ReportsService) {

@@ -14,7 +14,7 @@ export class TableComponent implements OnInit {
   showImage!: boolean;
   reconsheet: any;
   
-  columnsToDisplay = ['Patient Name', 'Patient ID','Doctor ID', 'Speciality Seen','Date of Birth', 'Date of Appointment', 'Time of Appointment', 'Appointment Status', 'CoPay', 'Payment Amount', 'Amount Collected']
+  columnsToDisplay = ['Patient-Name', 'Patient-ID','Doctor-ID', 'Speciality-Seen','Date-of-Birth', 'Date-of-Appointment', 'Time-of-Appointment', 'Appointment-Status', 'CoPay', 'Payment-Amount', 'Amount-Collected']
 
   @ViewChild(MatPaginator) paginator!: MatPaginator
 
