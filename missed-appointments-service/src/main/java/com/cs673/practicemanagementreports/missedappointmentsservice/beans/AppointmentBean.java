@@ -1,23 +1,29 @@
-package com.cs673.practicemanagementreports.missedappointmentslistservice.beans;
+package com.cs673.practicemanagementreports.missedappointmentsservice.beans;
 
 import java.sql.Date;
 import java.sql.Time;
 
-public class MissedAppointmentBean {
+public class AppointmentBean {
 
     private String patientName;
     private String patientID;
     private Date dateOfAppointment;
     private Time timeOfAppointment;
+    private String appointmentStatus;
+    private String doctorID;
+    private String specialitySeen;
 
-    public MissedAppointmentBean() {
+    public AppointmentBean() {
     }
 
-    public MissedAppointmentBean(String patientName, String patientID, Date dateOfAppointment, Time timeOfAppointment) {
+    public AppointmentBean(String patientName, String patientID, Date dateOfAppointment, Time timeOfAppointment, String appointmentStatus, String doctorID, String specialitySeen) {
         this.patientName = patientName;
         this.patientID = patientID;
         this.dateOfAppointment = dateOfAppointment;
         this.timeOfAppointment = timeOfAppointment;
+        this.appointmentStatus = appointmentStatus;
+        this.doctorID = doctorID;
+        this.specialitySeen = specialitySeen;
     }
 
     public String getPatientName() {
@@ -51,4 +57,29 @@ public class MissedAppointmentBean {
     public void setTimeOfAppointment(Time timeOfAppointment) {
         this.timeOfAppointment = timeOfAppointment;
     }
+
+    public String getAppointmentStatus() {
+        return appointmentStatus;
+    }
+
+    public void setAppointmentStatus(String appointmentStatus) {
+        this.appointmentStatus = appointmentStatus;
+    }
+
+    public String getDoctorID() {
+        return doctorID;
+    }
+
+    public void setDoctorID(String doctorID) {
+        this.doctorID = doctorID;
+    }
+
+    public String getSpecialitySeen() {
+        return specialitySeen;
+    }
+
+    public void setSpecialitySeen(String specialitySeen) {
+        this.specialitySeen = specialitySeen;
+    }
+
 }

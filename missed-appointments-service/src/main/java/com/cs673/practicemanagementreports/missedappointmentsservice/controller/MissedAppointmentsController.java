@@ -1,7 +1,7 @@
-package com.cs673.practicemanagementreports.missedappointmentslistservice.controller;
+package com.cs673.practicemanagementreports.missedappointmentsservice.controller;
 
-import com.cs673.practicemanagementreports.missedappointmentslistservice.beans.AppointmentList;
-import com.cs673.practicemanagementreports.missedappointmentslistservice.service.MissedAppointmentsService;
+import com.cs673.practicemanagementreports.missedappointmentsservice.beans.AppointmentList;
+import com.cs673.practicemanagementreports.missedappointmentsservice.service.MissedAppointmentsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

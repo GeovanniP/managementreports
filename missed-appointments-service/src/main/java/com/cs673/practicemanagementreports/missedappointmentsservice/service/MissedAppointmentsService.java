@@ -1,8 +1,8 @@
-package com.cs673.practicemanagementreports.missedappointmentslistservice.service;
+package com.cs673.practicemanagementreports.missedappointmentsservice.service;
 
-import com.cs673.practicemanagementreports.missedappointmentslistservice.beans.AppointmentList;
-import com.cs673.practicemanagementreports.missedappointmentslistservice.beans.MissedAppointmentBean;
-import com.cs673.practicemanagementreports.missedappointmentslistservice.beans.MissedAppointmentsList;
+import com.cs673.practicemanagementreports.missedappointmentsservice.beans.AppointmentList;
+import com.cs673.practicemanagementreports.missedappointmentsservice.beans.MissedAppointmentBean;
+import com.cs673.practicemanagementreports.missedappointmentsservice.beans.MissedAppointmentsList;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
