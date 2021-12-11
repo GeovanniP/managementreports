@@ -18,7 +18,7 @@ public class MissedAppointmentsService {
 
     public AppointmentList generateMissedAppointments(String date){
 
-        String appointmentSchedulingURI = "http://localhost:8089/practice-management-reports/missed-appointments-sample-data";
+        String appointmentSchedulingURI = "https://api-response-service.herokuapp.com/practice-management-reports/missed-appointments-sample-data";
         RestTemplate restTemplate = new RestTemplate();
         //Calling Appointment Scheduling Team's API to retrieve appointment details on the given date.
         AppointmentList appointments =  restTemplate.getForObject(appointmentSchedulingURI, AppointmentList.class);

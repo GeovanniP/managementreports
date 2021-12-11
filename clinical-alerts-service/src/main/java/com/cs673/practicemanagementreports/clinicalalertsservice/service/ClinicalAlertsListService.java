@@ -15,7 +15,7 @@ public class ClinicalAlertsListService {
 
     public ClinicalAlertsList generateClinicalAlertsList(String date){
 
-        String clinicalAlertsURI = "http://localhost:8089/practice-management-reports/clinical-alerts-sample-data";
+        String clinicalAlertsURI = "https://api-response-service.herokuapp.com/practice-management-reports/clinical-alerts-sample-data";
         RestTemplate restTemplate = new RestTemplate();
         //Calling Patient Team's API to retrieve clinical alert details on the given date.
         ClinicalAlertsList alerts =  restTemplate.getForObject(clinicalAlertsURI, ClinicalAlertsList.class);

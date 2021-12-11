@@ -17,7 +17,7 @@ public class RevenueAgingReportService {
 
     public RevenueAgingReportList generateRevenueAgingReport(String startDate, String endDate){
 
-        String billingURI = "http://localhost:8089/practice-management-reports/revenue-aging-report-sample-data";
+        String billingURI = "https://api-response-service.herokuapp.com/practice-management-reports/revenue-aging-report-sample-data";
         RestTemplate restTemplate = new RestTemplate();
         //Calling Billing Team's API to retrieve revenue aging report details on the given dates.
         RevenueAgingReportList revenueAgingReportList =  restTemplate.getForObject(billingURI, RevenueAgingReportList.class);

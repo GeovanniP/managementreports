@@ -13,7 +13,7 @@ public class PayerBasedReportService {
     }
 
     public PayerBasedReportList generatePayerBasedReport(String date){
-        String billingURI = "http://localhost:8089/practice-management-reports/payer-based-report-sample-data";
+        String billingURI = "https://api-response-service.herokuapp.com/practice-management-reports/payer-based-report-sample-data";
         RestTemplate restTemplate = new RestTemplate();
         //Calling Billing Team's API to retrieve payer based details on the given date.
         PayerBasedReportList payerBasedReportList =  restTemplate.getForObject(billingURI, PayerBasedReportList.class);
