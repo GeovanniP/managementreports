@@ -15,7 +15,7 @@ public class OverdueRecordsService {
 
     public OverdueRecordsList generateOverdueRecordsReport(){
 
-        String billingURI = "http://localhost:8089/practice-management-reports/overdue-records-sample-data";
+        String billingURI = "https://api-response-service.herokuapp.com/practice-management-reports/overdue-records-sample-data";
         RestTemplate restTemplate = new RestTemplate();
         //Calling Billing Team's API to retrieve billing details on the given date.
         OverdueRecordsList overdueRecordsList =  restTemplate.getForObject(billingURI, OverdueRecordsList.class);

@@ -9,9 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class ReconciliationSheetService {
@@ -21,13 +19,17 @@ public class ReconciliationSheetService {
 
     public ReconciliationSheetList generateReconciliationSheet(String date){
 
-        String appointmentSchedulingURI = "http://localhost:8089/practice-management-reports/appointments-sample-data";
+        String appointmentSchedulingURI = "https://api-response-service.herokuapp.com/practice-management-reports/appointments-sample-data";
         RestTemplate restTemplate = new RestTemplate();
         //Calling Appointment Scheduling Team's API to retrieve appointment details on the given date.
         AppointmentList appointments =  restTemplate.getForObject(appointmentSchedulingURI, AppointmentList.class);
-        String uri = "https://dry-ocean-01268.herokuapp.com/practicemanagements?doctorId=2222&patientId=1111";
-        String output = restTemplate.getForObject(uri, String.class);
-        System.out.println(output);
+        //String uri = "https://dry-ocean-01268.herokuapp.com/practicemanagements?doctorId=2222&patientId=1111";
+        String uri = "http://clinicmanagement-dev.us-east-2.elasticbeanstalk.com/api/GetAppointmentsByDate?date="+new Date(1282021);
+        Object output = restTemplate.getForObject(uri, Object.class);
+        System.out.println(output.getClass());
+        List appmap = ((ArrayList) output);
+        for (int x=0; x<appmap.size();x++)
+            System.out.println(appmap.get(x));
         //for(int i=0; i<output.length;i++){
             //System.out.println(output[i].toString());
         //}
@@ -42,12 +44,13 @@ public class ReconciliationSheetService {
             bean.setAppointmentStatus(appointments.getAppointmentBeanList().get(i).getAppointmentStatus());
             bean.setDoctorID(appointments.getAppointmentBeanList().get(i).getDoctorID());
             bean.setSpecialitySeen(appointments.getAppointmentBeanList().get(i).getSpecialitySeen());
-            String billingURI = "http://localhost:8089/practice-management-reports/billing-sample-data";
+            String billingURI = "https://api-response-service.herokuapp.com/practice-management-reports/billing-sample-data";
             //Calling billing team's API to get billing details for a given patient id.
-            BillingBean billingBean = restTemplate.getForObject(billingURI, BillingBean.class);
-            bean.setCoPay(billingBean.getCoPay());
-            bean.setPaymentAmount(billingBean.getPaymentAmount());
-            bean.setAmountCollected(billingBean.getAmountCollected());
+            Object object = restTemplate.getForObject(billingURI, Object.class);
+            HashMap map = ((LinkedHashMap) object);
+            bean.setCoPay((String) map.get("coPay"));
+            bean.setPaymentAmount((String) map.get("paymentAmount"));
+            bean.setAmountCollected((String) map.get("amountCollected"));
 
             list.add(bean);
         }

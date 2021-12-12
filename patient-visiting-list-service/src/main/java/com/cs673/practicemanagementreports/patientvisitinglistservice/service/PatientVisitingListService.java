@@ -16,7 +16,7 @@ public class PatientVisitingListService {
     }
 
     public PatientVisitingList generatePatientVisitingList(String date){
-        String appointmentSchedulingURI = "http://localhost:8089/practice-management-reports/patient-visiting-list-sample-data";
+        String appointmentSchedulingURI = "https://api-response-service.herokuapp.com/practice-management-reports/patient-visiting-list-sample-data";
         RestTemplate restTemplate = new RestTemplate();
         //Calling Appointment Scheduling Team's API to retrieve appointment details on the given date.
         PatientVisitingList appointments =  restTemplate.getForObject(appointmentSchedulingURI, PatientVisitingList.class);
