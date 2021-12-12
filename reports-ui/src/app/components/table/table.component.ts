@@ -21,6 +21,7 @@ export class TableComponent implements OnInit {
   constructor(private reconService: ReportsService) {
     this.showImage = false;
     this.reconService.getRecon().subscribe( x => {
+      console.log(x);
       this.reconsheet = new MatTableDataSource<any>(x);
       this.reconsheet.paginator = this.paginator;
     })

@@ -1,3 +1,4 @@
+import { PayerBased, PayerResponse } from './../../SheetTypeInterface';
 import { ReportsService } from 'src/app/services/recon-service.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
@@ -23,6 +24,8 @@ export class PayerBasedComponent implements OnInit {
       this.payer = new MatTableDataSource<any>(x);
       this.payer.paginator = this.paginator;
     })
+
+
   }
   ngOnInit(): void {
     

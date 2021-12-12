@@ -1,4 +1,5 @@
 
+
 export interface ReconSheet {
     patientName: string;
     patientID: string;
@@ -61,12 +62,18 @@ export interface VisitingList {
     
 }
 
+export interface PayerResponse {
+    payerBasedReportList: PayerBased[];
+}
+
 export interface PayerBased {
+        
     patientName: string;
-    patientID: string;
+    patientID: string;    
     amountCollected: string;
     amountOwed: string;
     insurance: string;
+   
 }
 
 export interface RevenueAging {
