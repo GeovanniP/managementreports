@@ -21,7 +21,7 @@ public class ReconciliationSheetService {
 
         String appointmentSchedulingURI = "https://api-response-service.herokuapp.com/practice-management-reports/appointments-sample-data";
         RestTemplate restTemplate = new RestTemplate();
-        //Calling Appointment Scheduling Team's API to retrieve appointment details on the given date.
+        /*//Calling Appointment Scheduling Team's API to retrieve appointment details on the given date.
         AppointmentList appointments =  restTemplate.getForObject(appointmentSchedulingURI, AppointmentList.class);
         //String uri = "https://dry-ocean-01268.herokuapp.com/practicemanagements?doctorId=2222&patientId=1111";
         String uri = "http://clinicmanagement-dev.us-east-2.elasticbeanstalk.com/api/GetAppointmentsByDate?date="+new Date(1282021);
@@ -32,13 +32,15 @@ public class ReconciliationSheetService {
             System.out.println(appmap.get(x));
         //for(int i=0; i<output.length;i++){
             //System.out.println(output[i].toString());
-        //}
+        //}*/
 
+        AppointmentList appointments =  restTemplate.getForObject(appointmentSchedulingURI, AppointmentList.class);
         List<ReconciliationSheetBean> list = new ArrayList<ReconciliationSheetBean>();
         for(int i=0;i<appointments.getAppointmentBeanList().size();i++){
             ReconciliationSheetBean bean = new ReconciliationSheetBean();
             bean.setPatientID(appointments.getAppointmentBeanList().get(i).getPatientID());
             bean.setPatientName(appointments.getAppointmentBeanList().get(i).getPatientName());
+            bean.setDateOfAppointment(appointments.getAppointmentBeanList().get(i).getDateOfBirth());
             bean.setDateOfAppointment(appointments.getAppointmentBeanList().get(i).getDateOfAppointment());
             bean.setTimeOfAppointment(appointments.getAppointmentBeanList().get(i).getTimeOfAppointment());
             bean.setAppointmentStatus(appointments.getAppointmentBeanList().get(i).getAppointmentStatus());

@@ -14,11 +14,11 @@ public class ApiResponseService {
     }
 
     public AppointmentList getAppointments(){
-        return new AppointmentList(Arrays.asList(new AppointmentBean("Patient A", "1", new Date(0), new Time(0), "status"),
-                new AppointmentBean("Patient B", "2", new Date(0), new Time(0), "status"),
-                new AppointmentBean("Patient C", "3", new Date(0), new Time(0), "status"),
-                new AppointmentBean("Patient D", "4", new Date(0), new Time(0), "status"),
-                new AppointmentBean("Patient E", "5", new Date(0), new Time(0), "status")));
+        return new AppointmentList(Arrays.asList(new AppointmentBean("Patient A", "1", new Date(20001012), new Date(0), new Time(0), "checked-in", "D101", "Speciality 1"),
+                new AppointmentBean("Patient B", "2", new Date(20040902), new Date(0), new Time(0), "checked-in", "D102", "Speciality 2"),
+                new AppointmentBean("Patient C", "3", new Date(19920211), new Date(0), new Time(0), "missed", "D102", "Speciality 2"),
+                new AppointmentBean("Patient D", "4", new Date(19981110), new Date(0), new Time(0), "checked-in", "D104", "Speciality 4"),
+                new AppointmentBean("Patient E", "5", new Date(20101210), new Date(0), new Time(0), "new-patient", "D103", "Speciality 3")));
     }
 
     public BillingBean getBillingDetails() {
@@ -26,11 +26,11 @@ public class ApiResponseService {
     }
 
     public AppointmentList getMissedAppointments() {
-        return new AppointmentList(Arrays.asList(new AppointmentBean("Patient A", "1", new Date(0), new Time(0), "missed"),
-                new AppointmentBean("Patient B", "2", new Date(0), new Time(0), "missed"),
-                new AppointmentBean("Patient C", "3", new Date(0), new Time(0), "missed"),
-                new AppointmentBean("Patient D", "4", new Date(0), new Time(0), "missed"),
-                new AppointmentBean("Patient E", "5", new Date(0), new Time(0), "missed")));
+        return new AppointmentList(Arrays.asList(new AppointmentBean("Patient A", "1", new Date(20001012), new Date(0), new Time(0), "missed", "D101", "Speciality 1"),
+                new AppointmentBean("Patient B", "2", new Date(20040902), new Date(0), new Time(0), "missed", "D102", "Speciality 2"),
+                new AppointmentBean("Patient C", "3", new Date(19920211), new Date(0), new Time(0), "missed", "D102", "Speciality 2"),
+                new AppointmentBean("Patient D", "4", new Date(19981110), new Date(0), new Time(0), "missed", "D104", "Speciality 4"),
+                new AppointmentBean("Patient E", "5", new Date(20101210), new Date(0), new Time(0), "missed", "D103", "Speciality 3")));
     }
 
     public RevenueAgingReportList getRevenueAgingDetails() {
