@@ -1,0 +1,11 @@
+{
+    "/practice-management-reports/reconciliation-sheet": {
+        "target": "https://reconciliation-sheet-service.herokuapp.com/practice-management-reports/reconciliation-sheet/date",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/api": ""
+          }
+    }
+}

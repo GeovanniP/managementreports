@@ -9,7 +9,7 @@ table {
 
 }
 
-.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Date-of-Appointment, .mat-column-Time-of-Appointment, .mat-column-Notes-Medications {
+.mat-column-Patient-Name, .mat-column-Patient-ID, .mat-column-Date-of-Appointment, .mat-column-Time-of-Appointment, .mat-column-Notes, .mat-column-Medications {
     padding-left: 5%;
 }
 
