@@ -7,6 +7,7 @@ public class AppointmentBean {
 
     private String patientName;
     private String patientID;
+    private Date dateOfBirth;
     private Date dateOfAppointment;
     private Time timeOfAppointment;
     private String appointmentStatus;
@@ -16,9 +17,10 @@ public class AppointmentBean {
     public AppointmentBean() {
     }
 
-    public AppointmentBean(String patientName, String patientID, Date dateOfAppointment, Time timeOfAppointment, String appointmentStatus, String doctorID, String specialitySeen) {
+    public AppointmentBean(String patientName, String patientID, Date dateOfBirth, Date dateOfAppointment, Time timeOfAppointment, String appointmentStatus, String doctorID, String specialitySeen) {
         this.patientName = patientName;
         this.patientID = patientID;
+        this.dateOfBirth = dateOfBirth;
         this.dateOfAppointment = dateOfAppointment;
         this.timeOfAppointment = timeOfAppointment;
         this.appointmentStatus = appointmentStatus;
@@ -80,6 +82,14 @@ public class AppointmentBean {
 
     public void setSpecialitySeen(String specialitySeen) {
         this.specialitySeen = specialitySeen;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
 }

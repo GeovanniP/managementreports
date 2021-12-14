@@ -7,19 +7,25 @@ public class AppointmentBean {
 
     private String patientName;
     private String patientID;
+    private Date dateOfBirth;
     private Date dateOfAppointment;
     private Time timeOfAppointment;
     private String appointmentStatus;
+    private String doctorID;
+    private String specialitySeen;
 
     public AppointmentBean() {
     }
 
-    public AppointmentBean(String patientName, String patientID, Date dateOfAppointment, Time timeOfAppointment, String appointmentStatus) {
+    public AppointmentBean(String patientName, String patientID, Date dateOfBirth, Date dateOfAppointment, Time timeOfAppointment, String appointmentStatus, String doctorID, String specialitySeen) {
         this.patientName = patientName;
         this.patientID = patientID;
+        this.dateOfBirth = dateOfBirth;
         this.dateOfAppointment = dateOfAppointment;
         this.timeOfAppointment = timeOfAppointment;
         this.appointmentStatus = appointmentStatus;
+        this.doctorID = doctorID;
+        this.specialitySeen = specialitySeen;
     }
 
     public String getPatientName() {
@@ -60,6 +66,30 @@ public class AppointmentBean {
 
     public void setAppointmentStatus(String appointmentStatus) {
         this.appointmentStatus = appointmentStatus;
+    }
+
+    public String getDoctorID() {
+        return doctorID;
+    }
+
+    public void setDoctorID(String doctorID) {
+        this.doctorID = doctorID;
+    }
+
+    public String getSpecialitySeen() {
+        return specialitySeen;
+    }
+
+    public void setSpecialitySeen(String specialitySeen) {
+        this.specialitySeen = specialitySeen;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
 }
