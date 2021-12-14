@@ -25,6 +25,7 @@ export class NewpatientComponent implements OnInit {
       this.newpatient= new MatTableDataSource<any>(x);
       this.newpatient.paginator = this.paginator;
     })
+    
   }
   ngOnInit(): void {
     
